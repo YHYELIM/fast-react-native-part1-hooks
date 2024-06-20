@@ -34,7 +34,6 @@ const[name, setName] = useState(""); //초기값 : 빈 String
       <TextInput
       value={name}
       onChangeText={v=>{
-        
         console.log('v', v);
         setName(v);
       }}
