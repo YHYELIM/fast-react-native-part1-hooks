@@ -4,6 +4,7 @@ import StateWithClassComponent from './StateWithClassComponent';
 import StateWithFunctionalComponent from './StateWithFunctionalComponent';
 import UseEffectWithClassComponent from './UseEffectWithClassComponent';
 import UseEffectWithFunctionalComponent from './UseEffectWithFunctionalComponent';
+import CustomHook from './CustomHook';
 import { useState } from 'react';
 
 export default function App() {
@@ -15,7 +16,8 @@ export default function App() {
   {/* <StateWithFunctionalComponent/> */}
     {/* {isTrue ? <UseEffectWithClassComponent/> : null} */}
     {/*true 일때만 UseEffectWithClassComponent 렌더링*/}
-    <UseEffectWithFunctionalComponent/>
+    {/* <UseEffectWithFunctionalComponent/> */}
+    <CustomHook/>
     
     <Button title='toggle' onPress={()=> setIsTrue(!isTrue)}> 
       {/*버튼을 눌렀을 때 setIsTrue 호출해서 isTrue 반전 시킴 */}
