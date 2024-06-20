@@ -1,13 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 import StateWithClassComponent from './StateWithClassComponent';
 import StateWithFunctionalComponent from './StateWithFunctionalComponent';
+import UseEffectWithClassComponent from './UseEffectWithClassComponent';
+import UseEffectWithFunctionalComponent from './UseEffectWithFunctionalComponent';
+import { useState } from 'react';
 
 export default function App() {
+  const [isTrue, setIsTrue] = useState(true);
+
   return (
     <View style={styles.container}>
   {/* <StateWithClassComponent />  */}
-    <StateWithFunctionalComponent/>
+  {/* <StateWithFunctionalComponent/> */}
+    {/* {isTrue ? <UseEffectWithClassComponent/> : null} */}
+    {/*true 일때만 UseEffectWithClassComponent 렌더링*/}
+    <UseEffectWithFunctionalComponent/>
+    
+    <Button title='toggle' onPress={()=> setIsTrue(!isTrue)}> 
+      {/*버튼을 눌렀을 때 setIsTrue 호출해서 isTrue 반전 시킴 */}
+
+    </Button>
     </View>
   );
 }
